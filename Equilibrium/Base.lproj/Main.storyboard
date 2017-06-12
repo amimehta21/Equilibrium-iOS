@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9JR-rK-T0t">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="EgH-bn-dJE">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,81 +9,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Equilibrium-->
-        <scene sceneID="Eo7-am-FIp">
-            <objects>
-                <tableViewController id="a9e-P0-KaQ" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="q1O-YD-fc1">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <sections>
-                            <tableViewSection headerTitle="select an option..." id="Kgn-yP-SSa">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="89" id="EuU-yV-mos">
-                                        <rect key="frame" x="0.0" y="55.5" width="375" height="89"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EuU-yV-mos" id="jee-m7-BW3">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="88.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trainer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aEX-4e-XwB">
-                                                    <rect key="frame" x="8" y="8" width="359" height="73"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="aEX-4e-XwB" secondAttribute="bottom" constant="8" id="107-IW-qcz"/>
-                                                <constraint firstAttribute="trailing" secondItem="aEX-4e-XwB" secondAttribute="trailing" constant="8" id="Gfa-wS-tjt"/>
-                                                <constraint firstItem="aEX-4e-XwB" firstAttribute="top" secondItem="jee-m7-BW3" secondAttribute="top" constant="8" id="RiK-Cg-bx2"/>
-                                                <constraint firstItem="aEX-4e-XwB" firstAttribute="leading" secondItem="jee-m7-BW3" secondAttribute="leading" constant="8" id="znA-dA-3BC"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="aEq-f5-XVO" kind="show" identifier="trainer" id="Ogg-U0-1dt"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="89" id="d0w-IZ-oXd">
-                                        <rect key="frame" x="0.0" y="144.5" width="375" height="89"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="d0w-IZ-oXd" id="eLD-L1-pGA">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="88.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Athlete" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DJM-qx-5L4">
-                                                    <rect key="frame" x="8" y="8" width="359" height="73"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="DJM-qx-5L4" firstAttribute="leading" secondItem="eLD-L1-pGA" secondAttribute="leading" constant="8" id="Atk-rY-cuk"/>
-                                                <constraint firstItem="DJM-qx-5L4" firstAttribute="top" secondItem="eLD-L1-pGA" secondAttribute="top" constant="8" id="UHh-Iz-nAU"/>
-                                                <constraint firstAttribute="bottom" secondItem="DJM-qx-5L4" secondAttribute="bottom" constant="8" id="fPa-Ib-cQz"/>
-                                                <constraint firstAttribute="trailing" secondItem="DJM-qx-5L4" secondAttribute="trailing" constant="8" id="gEC-Ut-QdK"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="aEq-f5-XVO" kind="show" identifier="athlete" id="S58-c4-1kP"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
-                        <connections>
-                            <outlet property="dataSource" destination="a9e-P0-KaQ" id="Ywv-Tz-G9P"/>
-                            <outlet property="delegate" destination="a9e-P0-KaQ" id="sta-6j-wTx"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Equilibrium" id="TbJ-ci-fcQ"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Hg5-aR-0hz" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="221.59999999999999" y="16.641679160419791"/>
-        </scene>
         <!--Launch Page-->
         <scene sceneID="N05-Wy-vgS">
             <objects>
@@ -98,12 +23,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <segue destination="hfS-pE-550" kind="presentation" modalTransitionStyle="crossDissolve" id="Sro-RS-eHK"/>
+                        <segue destination="hfS-pE-550" kind="presentation" identifier="to_login" modalTransitionStyle="crossDissolve" id="Sro-RS-eHK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lt6-hu-M9D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1162" y="17"/>
+            <point key="canvasLocation" x="-492" y="17"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="78C-H8-Hj3">
@@ -114,17 +39,17 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="a9e-P0-KaQ" kind="relationship" relationship="rootViewController" id="NKr-8K-2yz"/>
+                        <segue destination="aEq-f5-XVO" kind="relationship" relationship="rootViewController" id="4Vy-wO-l8w"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aaM-ne-Srh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-481" y="17"/>
+            <point key="canvasLocation" x="193" y="17"/>
         </scene>
         <!--Equilibrium-->
         <scene sceneID="VYE-Ef-ST6">
             <objects>
-                <tableViewController id="aEq-f5-XVO" sceneMemberID="viewController">
+                <tableViewController id="aEq-f5-XVO" customClass="LoginTableViewController" customModule="Equilibrium" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="0tJ-7e-E0A">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -185,6 +110,9 @@
                                                     <rect key="frame" x="8" y="8" width="359" height="69"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                     <state key="normal" title="Sign In..."/>
+                                                    <connections>
+                                                        <action selector="didTapSignIn:" destination="aEq-f5-XVO" eventType="touchUpInside" id="S6g-zl-Nte"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -205,8 +133,10 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Equilibrium" id="7I1-X3-NJg"/>
                     <connections>
-                        <segue destination="prP-jq-SXO" kind="presentation" modalTransitionStyle="crossDissolve" id="PUU-xF-9dT"/>
-                        <segue destination="EbA-Dj-ohH" kind="presentation" modalTransitionStyle="crossDissolve" id="qMG-Ye-9ji"/>
+                        <outlet property="passwordTextField" destination="HyG-ok-XX8" id="9be-Wu-agh"/>
+                        <outlet property="usernameTextField" destination="EP8-Mw-OzO" id="FMm-jD-IxU"/>
+                        <segue destination="prP-jq-SXO" kind="presentation" identifier="trainer_login" modalTransitionStyle="crossDissolve" id="PUU-xF-9dT"/>
+                        <segue destination="EbA-Dj-ohH" kind="presentation" identifier="athlete_login" modalTransitionStyle="crossDissolve" id="qMG-Ye-9ji"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UeS-qt-esM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -216,21 +146,30 @@
         <!--Select an Athlete-->
         <scene sceneID="C0Z-gr-G4P">
             <objects>
-                <tableViewController id="M8u-LN-e8i" sceneMemberID="viewController">
+                <tableViewController id="M8u-LN-e8i" customClass="SelectAthleteTableViewController" customModule="Equilibrium" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Au7-U9-y0O">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="TOV-4Q-CVN">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" textLabel="LTA-k3-hXc" style="IBUITableViewCellStyleDefault" id="TOV-4Q-CVN">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TOV-4Q-CVN" id="iB2-nh-DDv">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LTA-k3-hXc">
+                                            <rect key="frame" x="15" y="0.0" width="325" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="pML-LP-igM" kind="show" id="0pe-TB-2V7"/>
+                                    <segue destination="pML-LP-igM" kind="show" identifier="select_athlete" id="0pe-TB-2V7"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -248,21 +187,30 @@
         <!--Select a Session-->
         <scene sceneID="Hbt-xA-ryN">
             <objects>
-                <tableViewController id="pML-LP-igM" sceneMemberID="viewController">
+                <tableViewController id="pML-LP-igM" customClass="SelectSessionTableViewController" customModule="Equilibrium" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="dd2-yh-yaW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Rsg-7e-Hep">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" textLabel="8gt-2y-SI1" style="IBUITableViewCellStyleDefault" id="Rsg-7e-Hep">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Rsg-7e-Hep" id="osT-67-nsa">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8gt-2y-SI1">
+                                            <rect key="frame" x="15" y="0.0" width="325" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="uDe-Ze-c0l" kind="show" id="9G4-sF-Pvm"/>
+                                    <segue destination="uDe-Ze-c0l" kind="show" identifier="select_session" id="9G4-sF-Pvm"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -277,10 +225,10 @@
             </objects>
             <point key="canvasLocation" x="1634" y="767"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Session Table View Controller-->
         <scene sceneID="FyK-cQ-Ags">
             <objects>
-                <tableViewController id="uDe-Ze-c0l" sceneMemberID="viewController">
+                <tableViewController id="uDe-Ze-c0l" customClass="SessionTableViewController" customModule="Equilibrium" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="xtl-mm-Hrk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -288,11 +236,11 @@
                         <sections>
                             <tableViewSection id="v4Y-OY-9gu">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="245" id="Jkr-ZE-83Z">
-                                        <rect key="frame" x="0.0" y="35" width="375" height="245"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="71" id="Jkr-ZE-83Z">
+                                        <rect key="frame" x="0.0" y="35" width="375" height="71"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Jkr-ZE-83Z" id="a00-Yl-FHk">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="244.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="70.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -308,6 +256,39 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KEf-3b-6aM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2420" y="766.86656671664173"/>
+        </scene>
+        <!--Session View Controller-->
+        <scene sceneID="SP5-qw-fiA">
+            <objects>
+                <viewController id="EgH-bn-dJE" customClass="SessionViewController" customModule="Equilibrium" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="trN-89-3Pc"/>
+                        <viewControllerLayoutGuide type="bottom" id="yyF-gG-aMI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xCM-1l-FQ4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Miv-oh-dZr" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="20" width="375" height="639"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Miv-oh-dZr" firstAttribute="leading" secondItem="xCM-1l-FQ4" secondAttribute="leading" id="JE8-Ww-Iev"/>
+                            <constraint firstItem="Miv-oh-dZr" firstAttribute="top" secondItem="trN-89-3Pc" secondAttribute="bottom" id="fVj-pT-jUl"/>
+                            <constraint firstItem="yyF-gG-aMI" firstAttribute="top" secondItem="Miv-oh-dZr" secondAttribute="bottom" constant="8" symbolic="YES" id="gpp-YX-afj"/>
+                            <constraint firstAttribute="trailing" secondItem="Miv-oh-dZr" secondAttribute="trailing" id="q5m-AB-w0x"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="chartView" destination="Miv-oh-dZr" id="ZZV-IL-UY8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ecx-ji-CuF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3189.5999999999999" y="766.86656671664173"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xTc-MM-LC8">
@@ -345,7 +326,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Ogg-U0-1dt"/>
-        <segue reference="dtW-AA-KCP"/>
+        <segue reference="0pe-TB-2V7"/>
     </inferredMetricsTieBreakers>
 </document>
