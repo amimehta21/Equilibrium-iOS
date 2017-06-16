@@ -18,6 +18,30 @@ class SelectAthleteTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // fetch list of athletes for this specific trainer
+        let absolute = ["Foot", "Forearm", "Hand", "Shank", "Thigh", "Trunk", "Upperarm"]
+        let relative = ["Ankle", "Elbow", "Hip", "Knee", "Shoulder", "Wrist"]
+        let orientationDetail = ["Absolute": absolute, "Relative": relative]
+        var s102 = Session(name: "Running - 5/5/2016",
+                        id: 102,
+                        acceleration: ["Body", "Foot", "Forearm", "Shank", "Thigh", "Trunk", "Upperarm", "Wrist"],
+                        grf: "Foot",
+                        orientation: ["Frontal": orientationDetail,
+                                      "Sagittal": orientationDetail,
+                                      "Transverse": orientationDetail],
+                        stats: "Gait",
+                        velocity: ["Foot", "Speed"])
+        
+        var s101 = Session(name: "Basketball - 4/2/2017",
+                           id: 101,
+                           acceleration: nil,
+                           grf: "Foot",
+                           orientation: ["Frontal": orientationDetail,
+                                         "Sagittal": orientationDetail,
+                                         "Transverse": orientationDetail],
+                           stats: nil,
+                           velocity: nil)
+        
+        list.append(Athlete(name: "Bryshon Nellum", sessions: [s101, s102]))
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {

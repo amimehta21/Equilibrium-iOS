@@ -11,7 +11,7 @@ import UIKit
 class SelectSessionTableViewController: UITableViewController {
     
     private final var CELL_IDENTIFIER = "cell"
-    private final var SEGUE_SELECT_ATHLETE = "select_athlete"
+    private final var SEGUE_SELECT_SESSION = "select_session"
     
     var athlete: Athlete = Athlete()
 
@@ -37,9 +37,11 @@ class SelectSessionTableViewController: UITableViewController {
     
     // pass the selected athlete to the next screen, which displays a list of sessions
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier != nil && segue.identifier! == SEGUE_SELECT_ATHLETE {
-            if let nextView = segue.destination as? SessionViewController, let path = self.tableView.indexPathForSelectedRow {
+        if segue.identifier != nil && segue.identifier! == SEGUE_SELECT_SESSION {
+            if let nextView = segue.destination as? SessionMainTableViewController, let path = self.tableView.indexPathForSelectedRow {
                 nextView.session = athlete.getSessions()[path.row]
+                print("passed")
+                print(athlete.getSessions()[path.row].getAcceleration())
             }
         }
     }
