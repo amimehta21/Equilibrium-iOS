@@ -12,36 +12,31 @@ class SelectAthleteTableViewController: UITableViewController {
 
     private final var CELL_IDENTIFIER = "cell"
     private final var SEGUE_SELECT_ATHLETE = "select_athlete"
-
-    var list: [Athlete] = []
     
+    var coach: SimpleCoach!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // fetch list of athletes for this specific trainer
-        let absolute = ["Foot", "Forearm", "Hand", "Shank", "Thigh", "Trunk", "Upperarm"]
-        let relative = ["Ankle", "Elbow", "Hip", "Knee", "Shoulder", "Wrist"]
-        let orientationDetail = ["Absolute": absolute, "Relative": relative]
-        var s102 = Session(name: "Running - 5/5/2016",
-                        id: 102,
-                        acceleration: ["Body", "Foot", "Forearm", "Shank", "Thigh", "Trunk", "Upperarm", "Wrist"],
-                        grf: "Foot",
-                        orientation: ["Frontal": orientationDetail,
-                                      "Sagittal": orientationDetail,
-                                      "Transverse": orientationDetail],
-                        stats: "Gait",
-                        velocity: ["Foot", "Speed"])
-        
-        var s101 = Session(name: "Basketball - 4/2/2017",
-                           id: 101,
-                           acceleration: nil,
-                           grf: "Foot",
-                           orientation: ["Frontal": orientationDetail,
-                                         "Sagittal": orientationDetail,
-                                         "Transverse": orientationDetail],
-                           stats: nil,
-                           velocity: nil)
-        
-        list.append(Athlete(name: "Bryshon Nellum", sessions: [s101, s102]))
+        LoadingOverlay.shared.showOverlay(self.view)
+        if let orgID = coach.getUser().getOrgID() {
+            print("isUserManager: \(coach.getUser().getIsUserManager())")
+            print("isUserAthlete: \(coach.getUser().getIsAthlete())")
+            
+            let userPath = Downloader.buildURL(type: User.urlKeys.athletes.rawValue, parameters: [User.urlKeys.user.rawValue: "\(coach.getUser().getUserID())", User.urlKeys.org.rawValue: "\(orgID)"])
+            Downloader.downloadJSONAny(fromURL: userPath, completion: { (snapshot) in
+                self.itemsDownloaded(snapshot: snapshot)
+            })
+        } else {
+            print("org id not found")
+        }
+    }
+    
+    func itemsDownloaded(snapshot: Any?) {
+        if let athletes = snapshot as? [[String: String]] {
+            coach.setAthletes(athletes: athletes)
+            self.tableView.reloadData()
+            LoadingOverlay.shared.hideOverlayView()
+        }
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -49,22 +44,21 @@ class SelectAthleteTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return list.count
+        return coach.getAthletes().count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        let athlete = list[indexPath.row]
-        cell.textLabel?.text = athlete.getName()
+        let athlete = coach.getAthletes()[indexPath.row]
+        cell.textLabel?.text = athlete["name"]
         return cell
     }
     
     // pass the selected athlete to the next screen, which displays a list of sessions
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier != nil && segue.identifier! == SEGUE_SELECT_ATHLETE {
-            if let nextView = segue.destination as? SelectSessionTableViewController, let path = self.tableView.indexPathForSelectedRow {
-                nextView.athlete = list[path.row]
-            }
+        if let id = segue.identifier, id == SEGUE_SELECT_ATHLETE, let nextView = segue.destination as? SelectSessionTableViewController {
+            let row = self.tableView.indexPathForSelectedRow!.row
+            nextView.athlete = SimpleAthlete(name: coach.getAthletes()[row]["name"]!, userId: coach.getAthletes()[row]["userId"]!)
         }
     }
     

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="prP-jq-SXO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wM9-Ey-VZP">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -23,13 +23,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="YW9-Mf-tQc"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
-                        <segue destination="hfS-pE-550" kind="presentation" identifier="to_login" modalTransitionStyle="crossDissolve" id="Sro-RS-eHK"/>
+                        <segue destination="hfS-pE-550" kind="presentation" identifier="toLogin" modalTransitionStyle="crossDissolve" id="Sro-RS-eHK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lt6-hu-M9D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-492" y="17"/>
+            <point key="canvasLocation" x="447.19999999999999" y="16.641679160419791"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="78C-H8-Hj3">
@@ -45,7 +47,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aaM-ne-Srh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="193" y="17"/>
+            <point key="canvasLocation" x="1132" y="16.641679160419791"/>
         </scene>
         <!--Equilibrium-->
         <scene sceneID="VYE-Ef-ST6">
@@ -65,7 +67,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="enter your username..." textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EP8-Mw-OzO">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="coach@vayu.tech" placeholder="enter your username..." textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EP8-Mw-OzO">
                                                     <rect key="frame" x="8" y="8" width="359" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <nil key="textColor"/>
@@ -86,7 +88,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="enter your password..." textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HyG-ok-XX8">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="admin123" placeholder="enter your password..." textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HyG-ok-XX8">
                                                     <rect key="frame" x="8" y="8" width="359" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <nil key="textColor"/>
@@ -108,7 +110,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I8t-uO-Ppo">
-                                                    <rect key="frame" x="8" y="8" width="359" height="69"/>
+                                                    <rect key="frame" x="8" y="8" width="359" height="68"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                     <state key="normal" title="Sign In..."/>
                                                     <connections>
@@ -142,7 +144,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UeS-qt-esM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="893.60000000000002" y="17.541229385307346"/>
+            <point key="canvasLocation" x="1832.8" y="17.541229385307346"/>
         </scene>
         <!--Select an Athlete-->
         <scene sceneID="C0Z-gr-G4P">
@@ -523,9 +525,16 @@
                     </tableView>
                     <connections>
                         <outlet property="accelerationCell" destination="iE7-Ec-qKA" id="aUI-nJ-j20"/>
+                        <outlet property="distanceCell" destination="oUW-4Y-aiC" id="kll-RH-FhC"/>
                         <outlet property="grfCell" destination="zn3-Ot-B9r" id="s0H-q6-Cfo"/>
+                        <outlet property="leftGaitCell" destination="wHz-ca-HpX" id="FVe-Vr-AqA"/>
+                        <outlet property="leftStanceCell" destination="5O4-kc-jIj" id="Hcw-Dc-Wea"/>
+                        <outlet property="leftSwingCell" destination="Nvy-lW-3Ce" id="RxF-Fu-ahb"/>
                         <outlet property="orientationCell" destination="Ety-kf-JnF" id="jl5-1c-7Wv"/>
                         <outlet property="rightGaitCell" destination="Nvg-A9-7WZ" id="b5c-PB-UFQ"/>
+                        <outlet property="rightStanceCell" destination="KTF-xe-pbd" id="xV4-Yv-gEq"/>
+                        <outlet property="rightSwingCell" destination="v5x-NE-S9B" id="lTD-eS-eW9"/>
+                        <outlet property="stepsCell" destination="0Bb-dO-4eK" id="MUh-F5-pZU"/>
                         <outlet property="velocityCell" destination="Krg-pA-ocv" id="3gk-y0-SwZ"/>
                     </connections>
                 </tableViewController>
@@ -546,7 +555,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Twj-bq-orf" customClass="LineChartView" customModule="Charts">
-                                <rect key="frame" x="16" y="72" width="343" height="575"/>
+                                <rect key="frame" x="16" y="72" width="343" height="531"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
@@ -558,9 +567,23 @@
                             <constraint firstItem="exh-yS-eMM" firstAttribute="top" secondItem="Twj-bq-orf" secondAttribute="bottom" constant="20" id="p9s-ET-HAl"/>
                         </constraints>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="y1Q-2g-MPa"/>
+                        <barButtonItem title="Filter" id="OXb-g8-h2q">
+                            <connections>
+                                <action selector="filterGraph:" destination="0qZ-Z9-7cu" id="1jw-d5-c1y"/>
+                                <segue destination="Frz-9e-qEB" kind="presentation" id="Xng-ig-ufU"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" id="cH4-XJ-x5B">
-                        <barButtonItem key="rightBarButtonItem" systemItem="organize" id="1PS-zK-0Sj"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="Res-Hc-QlW">
+                            <connections>
+                                <action selector="resetScale:" destination="0qZ-Z9-7cu" id="fGu-eF-l4P"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="lineChartView" destination="Twj-bq-orf" id="UYf-3w-Vuf"/>
                     </connections>
@@ -568,6 +591,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sIJ-o6-FhH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3167" y="914"/>
+        </scene>
+        <!--Graph List View Controller-->
+        <scene sceneID="Bhw-GL-pZf">
+            <objects>
+                <viewController id="yJv-L3-GfV" customClass="GraphListViewController" customModule="Equilibrium" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4hc-V6-HHl"/>
+                        <viewControllerLayoutGuide type="bottom" id="o6b-IK-RyW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Hu6-oE-Em4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="aXr-0Z-Z69">
+                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="vHt-0Y-teB">
+                            <connections>
+                                <segue destination="fqD-ff-IV1" kind="unwind" identifier="cancelToGraph" unwindAction="cancelToGraphViewWithSegue:" id="JIZ-U3-FiI"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="done" id="aic-rg-Rxy">
+                            <connections>
+                                <segue destination="fqD-ff-IV1" kind="unwind" identifier="saveToGraph" unwindAction="saveToGraphViewWithSegue:" id="nNG-op-o0l"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qah-Pm-Vbh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="fqD-ff-IV1" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="4772" y="907.1964017991005"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xTc-MM-LC8">
@@ -601,7 +655,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xNX-yt-FRk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1634" y="18"/>
+            <point key="canvasLocation" x="2572" y="17.541229385307346"/>
         </scene>
         <!--Orientation Detail Table View Controller-->
         <scene sceneID="2TL-Lc-T4t">
@@ -642,7 +696,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zXI-md-PeT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3672" y="81"/>
+            <point key="canvasLocation" x="4610.3999999999996" y="80.50974512743629"/>
         </scene>
         <!--Orientation Main Table View Controller-->
         <scene sceneID="gDU-mN-MWL">
@@ -683,7 +737,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yvm-vF-xda" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2937" y="81"/>
+            <point key="canvasLocation" x="3876" y="80.50974512743629"/>
         </scene>
         <!--Session Detail Table View Controller-->
         <scene sceneID="kip-eX-OAF">
@@ -725,6 +779,42 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fOO-r3-5lb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2478" y="1501"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="yYe-1I-EqH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Frz-9e-qEB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pTO-db-Mls">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="yJv-L3-GfV" kind="relationship" relationship="rootViewController" id="iuz-db-M20"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZQJ-Hb-1th" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3889" y="907"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Vaw-yZ-wJx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wM9-Ey-VZP" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KOn-6i-kSq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9JR-rK-T0t" kind="relationship" relationship="rootViewController" id="4H6-Ta-PZa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DSj-VP-azl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-492" y="16.641679160419791"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

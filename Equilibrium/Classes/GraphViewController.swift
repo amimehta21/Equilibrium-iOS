@@ -20,38 +20,44 @@ class GraphViewController: UIViewController, ChartViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = name
+        self.navigationController?.setToolbarHidden(false, animated: true)
         let folderPath = Bundle.main.path(forResource: "1", ofType: "")
         let fileName = name.lowercased() + ".json"
         let path = folderPath! + location + fileName
-        print("PATH: " + path)
-        let url = URL(fileURLWithPath: path)
-        let desc = name
-        
-        self.lineChartView.delegate = self
-        
-        do {
-            let data = try Data(contentsOf: url)
-            let json = try JSONSerialization.jsonObject(with: data, options: [])
-            let dataString = try String(contentsOf: url)
-            if let object = json as? [String: Any] {
-                var numGraphs = 0
-                if dataString.contains("left") && dataString.contains("right") && dataString.contains("x") && dataString.contains("y") && dataString.contains("z") {
-                    numGraphs = 6
-                } else if dataString.contains("left") && dataString.contains("right") {
-                    numGraphs = 2
-                } else if dataString.contains("x") && dataString.contains("y") && dataString.contains("z") {
-                    numGraphs = 3
-                }  else {
-                    numGraphs = 1
-                }
-                setChartData(object: object, description: desc, numGraphs: numGraphs)
-            } else {
-                print("JSON is invalid")
+
+        if let jsonObject = FileUtils.getJSON(atPath: path), let jsonString = FileUtils.getStringFromFile(atPath: path) {
+            var numGraphs = 0
+            if jsonString.contains("left") && jsonString.contains("right") && jsonString.contains("x") && jsonString.contains("y") && jsonString.contains("z") {
+                numGraphs = 6
+            } else if jsonString.contains("left") && jsonString.contains("right") {
+                numGraphs = 2
+            } else if jsonString.contains("x") && jsonString.contains("y") && jsonString.contains("z") {
+                numGraphs = 3
+            }  else {
+                numGraphs = 1
             }
             
-        } catch {
-            print(error.localizedDescription)
+            setChartData(object: jsonObject, description: name, numGraphs: numGraphs)
         }
+    }
+    
+    @IBAction func cancelToGraphView(segue: UIStoryboardSegue) {}
+    
+    @IBAction func saveToGraphView(segue: UIStoryboardSegue) {
+        if let graphListView = segue.source as? GraphListViewController {
+            sets = graphListView.sets
+            setLineChartDataSource()
+        }
+    }
+    
+    @IBAction func resetScale(_ sender: Any) {
+        print("reset")
+        lineChartView.fitScreen()
+    }
+    
+    @IBAction func filterGraph(_ sender: Any) {
+        
     }
         
     func setChartData(object: [String: Any], description: String, numGraphs: Int) {
@@ -82,19 +88,21 @@ class GraphViewController: UIViewController, ChartViewDelegate {
             set.drawCirclesEnabled = false
             set.drawValuesEnabled = false
         }
-        
-        let data = LineChartData(dataSets: sets)
-        data.setValueTextColor(UIColor.black)
-        lineChartView.data = data
+        setLineChartDataSource()
         lineChartView.drawMarkers = false
         lineChartView.chartDescription?.text = description
         lineChartView.chartDescription?.font = UIFont.systemFont(ofSize: 12.0)
     }
     
-    func chartValueSelected(_ chartView: ChartViewBase, entry: ChartDataEntry, highlight: Highlight) {
-        lineChartView.chartDescription?.text = "Location: (\(entry.x), \(entry.y))"
+    func setLineChartDataSource() {
+        let data = LineChartData(dataSets: sets)
+        data.setValueTextColor(UIColor.black)
+        lineChartView.data = data
     }
     
+    func chartValueSelected(_ chartView: ChartViewBase, entry: ChartDataEntry, highlight: Highlight) {
+        print("Slected")
+    }
     func getChartDataSetSix(object: [String: Any]) -> [LineChartDataSet] {
         var sets = [LineChartDataSet]()
         let types = [SetTypeSix(direction: "x", side: "right", description: "Right X"),
@@ -181,6 +189,16 @@ class GraphViewController: UIViewController, ChartViewDelegate {
         }
         let set = LineChartDataSet(values: chartDataEntry, label: label)
         return set
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let navVC = segue.destination as? UINavigationController
+        let tableVC = navVC?.viewControllers.first as! GraphListViewController
+        // must pass the currently selected items.
+        // create a struct w/ item name & boolean value selected?
+        tableVC.sets = sets
+        
     }
     
 }

@@ -11,11 +11,13 @@ import UIKit
 class FirstViewController: UIViewController {
     
     // this segue does not currently exist
-    private final var SEGUE_TO_LOGIN = "to_login"
+    private final var SEGUE_TO_LOGIN = "toLogin"
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("View did load!")
         self.performSegue(withIdentifier: SEGUE_TO_LOGIN, sender: self)
+        
     }
     
 }

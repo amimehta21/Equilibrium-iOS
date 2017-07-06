@@ -16,6 +16,13 @@ class SessionMainTableViewController: UITableViewController {
     @IBOutlet weak var velocityCell: UITableViewCell!
     
     @IBOutlet weak var rightGaitCell: UITableViewCell!
+    @IBOutlet weak var leftGaitCell: UITableViewCell!
+    @IBOutlet weak var rightSwingCell: UITableViewCell!
+    @IBOutlet weak var leftSwingCell: UITableViewCell!
+    @IBOutlet weak var rightStanceCell: UITableViewCell!
+    @IBOutlet weak var leftStanceCell: UITableViewCell!
+    @IBOutlet weak var stepsCell: UITableViewCell!
+    @IBOutlet weak var distanceCell: UITableViewCell!
     
     
     var session: Session = Session()
@@ -30,13 +37,25 @@ class SessionMainTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         location = "/\(session.getID())"
-        /*if (session.getStats() != nil) {
-            parseStats(stats: session.getStats()!)
-        }*/
+        if let fileName = session.getStats() {
+            parseStats(fileName: fileName)
+        }
     }
     
-    func parseStats(stats: [String: String]) {
-        rightGaitCell.detailTextLabel?.text = stats["right_gait"]
+    func parseStats(fileName: String) {
+        let path = Bundle.main.path(forResource: "1", ofType: "")! + location + "/stats/" + fileName.lowercased() + ".json"
+
+        if let jsonObject = FileUtils.getJSON(atPath: path) as? [String: String] {
+            rightGaitCell.detailTextLabel?.text = jsonObject["right_gait"]
+            leftGaitCell.detailTextLabel?.text = jsonObject["left_gait"]
+            rightSwingCell.detailTextLabel?.text = jsonObject["right_swing"]
+            leftSwingCell.detailTextLabel?.text = jsonObject["left_swing"]
+            rightStanceCell.detailTextLabel?.text = jsonObject["right_stance"]
+            leftStanceCell.detailTextLabel?.text = jsonObject["left_stance"]
+            stepsCell.detailTextLabel?.text = jsonObject["steps"]
+            distanceCell.detailTextLabel?.text = jsonObject["distance"]
+        }
+        
     }
     
     // MARK: - Table view data source

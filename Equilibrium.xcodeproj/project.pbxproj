@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		43AE2D898503F73D981018E7 /* Pods_Equilibrium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F623A0F21D5B1EB9433695E1 /* Pods_Equilibrium.framework */; };
+		5A0663071EF7074D00A86464 /* GraphType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0663061EF7074D00A86464 /* GraphType.swift */; };
+		5A0CD2021F02BFF2004CC116 /* Organization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0CD2011F02BFF2004CC116 /* Organization.swift */; };
+		5A0CD20E1F0411D3004CC116 /* LoadingOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0CD20D1F0411D3004CC116 /* LoadingOverlay.swift */; };
+		5A0CD2101F041358004CC116 /* Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0CD20F1F041358004CC116 /* Downloader.swift */; };
 		5A56609C1EEF4ADC0002A56C /* 1 in Resources */ = {isa = PBXBuildFile; fileRef = 5A56609B1EEF4ADC0002A56C /* 1 */; };
 		5A56609E1EEF5EBD0002A56C /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A56609D1EEF5EBD0002A56C /* GraphViewController.swift */; };
 		5A5986F31EF2EE83007755CC /* SessionMainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5986F21EF2EE83007755CC /* SessionMainTableViewController.swift */; };
@@ -17,6 +21,9 @@
 		5A75C4411EEEFB7D00B73698 /* Athlete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A75C4401EEEFB7D00B73698 /* Athlete.swift */; };
 		5A75C4431EEEFFEB00B73698 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A75C4421EEEFFEB00B73698 /* Session.swift */; };
 		5A75C4451EEF024E00B73698 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A75C4441EEF024E00B73698 /* Extensions.swift */; };
+		5A7D51BF1EFD740200E20E17 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7D51BE1EFD740200E20E17 /* User.swift */; };
+		5A7D51C11EFD7A7300E20E17 /* Trial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7D51C01EFD7A7300E20E17 /* Trial.swift */; };
+		5A7D51C31EFD81E700E20E17 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7D51C21EFD81E700E20E17 /* Device.swift */; };
 		5A8729721EEE43AC001A04E6 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8729711EEE43AC001A04E6 /* FirstViewController.swift */; };
 		5A8729761EEE474B001A04E6 /* LoginTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8729751EEE474B001A04E6 /* LoginTableViewController.swift */; };
 		5A8729781EEE4BC5001A04E6 /* SelectAthleteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8729771EEE4BC5001A04E6 /* SelectAthleteTableViewController.swift */; };
@@ -29,6 +36,11 @@
 		5AC5C50B1EECA724007829E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AC5C5091EECA724007829E4 /* LaunchScreen.storyboard */; };
 		5AC5C5161EECA724007829E4 /* EquilibriumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC5C5151EECA724007829E4 /* EquilibriumTests.swift */; };
 		5AC5C5211EECA724007829E4 /* EquilibriumUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC5C5201EECA724007829E4 /* EquilibriumUITests.swift */; };
+		5AD7D5691F0D5E7400D40F7C /* GlobalUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD7D5681F0D5E7400D40F7C /* GlobalUtils.swift */; };
+		5AE03BBF1F0D48C7008FA4AF /* SimpleAthlete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE03BBE1F0D48C7008FA4AF /* SimpleAthlete.swift */; };
+		5AE03BC11F0D4A55008FA4AF /* SimpleCoach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE03BC01F0D4A55008FA4AF /* SimpleCoach.swift */; };
+		5AF947801EF6E6AF0022BF9B /* FileUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF9477F1EF6E6AF0022BF9B /* FileUtils.swift */; };
+		5AF947821EF6F40A0022BF9B /* GraphListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF947811EF6F40A0022BF9B /* GraphListViewController.swift */; };
 		78AB8AF13678DDC02BF7110D /* Pods_EquilibriumTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAB85DCF3F3CA7669CEB05A1 /* Pods_EquilibriumTests.framework */; };
 		82E992F66239B51E49696DDE /* Pods_EquilibriumUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08E26EBC437373C1ECA218AE /* Pods_EquilibriumUITests.framework */; };
 /* End PBXBuildFile section */
@@ -53,6 +65,10 @@
 /* Begin PBXFileReference section */
 		0608DC361317AD00F96A5F6F /* Pods-EquilibriumUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EquilibriumUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EquilibriumUITests/Pods-EquilibriumUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		08E26EBC437373C1ECA218AE /* Pods_EquilibriumUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EquilibriumUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A0663061EF7074D00A86464 /* GraphType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GraphType.swift; path = Classes/GraphType.swift; sourceTree = "<group>"; };
+		5A0CD2011F02BFF2004CC116 /* Organization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Organization.swift; path = Classes/Organization.swift; sourceTree = "<group>"; };
+		5A0CD20D1F0411D3004CC116 /* LoadingOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoadingOverlay.swift; path = Classes/LoadingOverlay.swift; sourceTree = "<group>"; };
+		5A0CD20F1F041358004CC116 /* Downloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Downloader.swift; path = Classes/Downloader.swift; sourceTree = "<group>"; };
 		5A56609B1EEF4ADC0002A56C /* 1 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = 1; sourceTree = "<group>"; };
 		5A56609D1EEF5EBD0002A56C /* GraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GraphViewController.swift; path = Classes/GraphViewController.swift; sourceTree = "<group>"; };
 		5A5986F21EF2EE83007755CC /* SessionMainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SessionMainTableViewController.swift; path = Classes/SessionMainTableViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +78,9 @@
 		5A75C4401EEEFB7D00B73698 /* Athlete.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Athlete.swift; path = Classes/Athlete.swift; sourceTree = "<group>"; };
 		5A75C4421EEEFFEB00B73698 /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Session.swift; path = Classes/Session.swift; sourceTree = "<group>"; };
 		5A75C4441EEF024E00B73698 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = Classes/Extensions.swift; sourceTree = "<group>"; };
+		5A7D51BE1EFD740200E20E17 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Classes/User.swift; sourceTree = "<group>"; };
+		5A7D51C01EFD7A7300E20E17 /* Trial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Trial.swift; path = Classes/Trial.swift; sourceTree = "<group>"; };
+		5A7D51C21EFD81E700E20E17 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Device.swift; path = Classes/Device.swift; sourceTree = "<group>"; };
 		5A8729711EEE43AC001A04E6 /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FirstViewController.swift; path = Classes/FirstViewController.swift; sourceTree = "<group>"; };
 		5A8729751EEE474B001A04E6 /* LoginTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginTableViewController.swift; path = Classes/LoginTableViewController.swift; sourceTree = "<group>"; };
 		5A8729771EEE4BC5001A04E6 /* SelectAthleteTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SelectAthleteTableViewController.swift; path = Classes/SelectAthleteTableViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +99,11 @@
 		5AC5C51C1EECA724007829E4 /* EquilibriumUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EquilibriumUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AC5C5201EECA724007829E4 /* EquilibriumUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquilibriumUITests.swift; sourceTree = "<group>"; };
 		5AC5C5221EECA724007829E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5AD7D5681F0D5E7400D40F7C /* GlobalUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GlobalUtils.swift; path = Classes/GlobalUtils.swift; sourceTree = "<group>"; };
+		5AE03BBE1F0D48C7008FA4AF /* SimpleAthlete.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SimpleAthlete.swift; path = Classes/SimpleAthlete.swift; sourceTree = "<group>"; };
+		5AE03BC01F0D4A55008FA4AF /* SimpleCoach.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SimpleCoach.swift; path = Classes/SimpleCoach.swift; sourceTree = "<group>"; };
+		5AF9477F1EF6E6AF0022BF9B /* FileUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FileUtils.swift; path = Classes/FileUtils.swift; sourceTree = "<group>"; };
+		5AF947811EF6F40A0022BF9B /* GraphListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GraphListViewController.swift; path = Classes/GraphListViewController.swift; sourceTree = "<group>"; };
 		6486A7B2E384CA3AD865862D /* Pods-Equilibrium.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Equilibrium.release.xcconfig"; path = "Pods/Target Support Files/Pods-Equilibrium/Pods-Equilibrium.release.xcconfig"; sourceTree = "<group>"; };
 		7DA6B08A11C66E8DE09BF385 /* Pods-EquilibriumUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EquilibriumUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EquilibriumUITests/Pods-EquilibriumUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BAB85DCF3F3CA7669CEB05A1 /* Pods_EquilibriumTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EquilibriumTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -142,21 +166,16 @@
 		5AC5C4FC1EECA724007829E4 /* Equilibrium */ = {
 			isa = PBXGroup;
 			children = (
-				5AC5C4FD1EECA724007829E4 /* AppDelegate.swift */,
 				5AC5C5011EECA724007829E4 /* Main.storyboard */,
-				5A5986F81EF30369007755CC /* SessionDetailTableViewController.swift */,
-				5A5986F41EF2F82F007755CC /* OrientationMainTableViewController.swift */,
-				5A5986F61EF2F83B007755CC /* OrientationDetailTableViewController.swift */,
-				5A5986F21EF2EE83007755CC /* SessionMainTableViewController.swift */,
-				5A75C4441EEF024E00B73698 /* Extensions.swift */,
+				5AC5C4FD1EECA724007829E4 /* AppDelegate.swift */,
 				5A8729711EEE43AC001A04E6 /* FirstViewController.swift */,
 				5A8729751EEE474B001A04E6 /* LoginTableViewController.swift */,
 				5A8729771EEE4BC5001A04E6 /* SelectAthleteTableViewController.swift */,
-				5A75C4401EEEFB7D00B73698 /* Athlete.swift */,
-				5A75C4421EEEFFEB00B73698 /* Session.swift */,
-				5A56609D1EEF5EBD0002A56C /* GraphViewController.swift */,
-				5AAC64941EF1BF1C00BD550B /* ChartDataStructures.swift */,
 				5A8729791EEE4BD0001A04E6 /* SelectSessionTableViewController.swift */,
+				5AD7D56F1F0E972D00D40F7C /* Sessions */,
+				5AD7D5701F0E973C00D40F7C /* Objects */,
+				5AD7D56E1F0E970600D40F7C /* Graphs */,
+				5AD7D5711F0E975700D40F7C /* Utilities */,
 				5AC5C5071EECA724007829E4 /* Assets.xcassets */,
 				5AC5C5091EECA724007829E4 /* LaunchScreen.storyboard */,
 				5AC5C50C1EECA724007829E4 /* Info.plist */,
@@ -182,6 +201,55 @@
 				5AC5C5221EECA724007829E4 /* Info.plist */,
 			);
 			path = EquilibriumUITests;
+			sourceTree = "<group>";
+		};
+		5AD7D56E1F0E970600D40F7C /* Graphs */ = {
+			isa = PBXGroup;
+			children = (
+				5A0663061EF7074D00A86464 /* GraphType.swift */,
+				5A56609D1EEF5EBD0002A56C /* GraphViewController.swift */,
+				5AF947811EF6F40A0022BF9B /* GraphListViewController.swift */,
+				5AAC64941EF1BF1C00BD550B /* ChartDataStructures.swift */,
+			);
+			name = Graphs;
+			sourceTree = "<group>";
+		};
+		5AD7D56F1F0E972D00D40F7C /* Sessions */ = {
+			isa = PBXGroup;
+			children = (
+				5A5986F21EF2EE83007755CC /* SessionMainTableViewController.swift */,
+				5A5986F81EF30369007755CC /* SessionDetailTableViewController.swift */,
+				5A5986F41EF2F82F007755CC /* OrientationMainTableViewController.swift */,
+				5A5986F61EF2F83B007755CC /* OrientationDetailTableViewController.swift */,
+			);
+			name = Sessions;
+			sourceTree = "<group>";
+		};
+		5AD7D5701F0E973C00D40F7C /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				5A7D51BE1EFD740200E20E17 /* User.swift */,
+				5A75C4401EEEFB7D00B73698 /* Athlete.swift */,
+				5AE03BBE1F0D48C7008FA4AF /* SimpleAthlete.swift */,
+				5AE03BC01F0D4A55008FA4AF /* SimpleCoach.swift */,
+				5A0CD2011F02BFF2004CC116 /* Organization.swift */,
+				5A7D51C01EFD7A7300E20E17 /* Trial.swift */,
+				5A75C4421EEEFFEB00B73698 /* Session.swift */,
+				5A7D51C21EFD81E700E20E17 /* Device.swift */,
+			);
+			name = Objects;
+			sourceTree = "<group>";
+		};
+		5AD7D5711F0E975700D40F7C /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				5A75C4441EEF024E00B73698 /* Extensions.swift */,
+				5AF9477F1EF6E6AF0022BF9B /* FileUtils.swift */,
+				5AD7D5681F0D5E7400D40F7C /* GlobalUtils.swift */,
+				5A0CD20F1F041358004CC116 /* Downloader.swift */,
+				5A0CD20D1F0411D3004CC116 /* LoadingOverlay.swift */,
+			);
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 		8972335BE51F82E9C65F4F55 /* Pods */ = {
@@ -492,19 +560,31 @@
 			files = (
 				5AAC64951EF1BF1C00BD550B /* ChartDataStructures.swift in Sources */,
 				5A75C4431EEEFFEB00B73698 /* Session.swift in Sources */,
+				5A0CD2101F041358004CC116 /* Downloader.swift in Sources */,
+				5A0CD2021F02BFF2004CC116 /* Organization.swift in Sources */,
 				5A8729761EEE474B001A04E6 /* LoginTableViewController.swift in Sources */,
 				5A5986F51EF2F82F007755CC /* OrientationMainTableViewController.swift in Sources */,
+				5AE03BC11F0D4A55008FA4AF /* SimpleCoach.swift in Sources */,
 				5A75C4411EEEFB7D00B73698 /* Athlete.swift in Sources */,
 				5A8729721EEE43AC001A04E6 /* FirstViewController.swift in Sources */,
+				5A0CD20E1F0411D3004CC116 /* LoadingOverlay.swift in Sources */,
 				5AC5C4FE1EECA724007829E4 /* AppDelegate.swift in Sources */,
 				5A5986F71EF2F83B007755CC /* OrientationDetailTableViewController.swift in Sources */,
 				5A5986F91EF30369007755CC /* SessionDetailTableViewController.swift in Sources */,
 				5AC5C5061EECA724007829E4 /* Equilibrium.xcdatamodeld in Sources */,
+				5A7D51C11EFD7A7300E20E17 /* Trial.swift in Sources */,
 				5A8729781EEE4BC5001A04E6 /* SelectAthleteTableViewController.swift in Sources */,
+				5AD7D5691F0D5E7400D40F7C /* GlobalUtils.swift in Sources */,
+				5A7D51C31EFD81E700E20E17 /* Device.swift in Sources */,
+				5AF947801EF6E6AF0022BF9B /* FileUtils.swift in Sources */,
+				5A0663071EF7074D00A86464 /* GraphType.swift in Sources */,
+				5AF947821EF6F40A0022BF9B /* GraphListViewController.swift in Sources */,
 				5A56609E1EEF5EBD0002A56C /* GraphViewController.swift in Sources */,
 				5A75C4451EEF024E00B73698 /* Extensions.swift in Sources */,
 				5A87297A1EEE4BD0001A04E6 /* SelectSessionTableViewController.swift in Sources */,
 				5A5986F31EF2EE83007755CC /* SessionMainTableViewController.swift in Sources */,
+				5AE03BBF1F0D48C7008FA4AF /* SimpleAthlete.swift in Sources */,
+				5A7D51BF1EFD740200E20E17 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

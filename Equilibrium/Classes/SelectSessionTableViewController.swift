@@ -13,11 +13,31 @@ class SelectSessionTableViewController: UITableViewController {
     private final var CELL_IDENTIFIER = "cell"
     private final var SEGUE_SELECT_SESSION = "select_session"
     
-    var athlete: Athlete = Athlete()
+    var athlete: SimpleAthlete!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // fetch list of athletes for this specific trainer
+        LoadingOverlay.shared.showOverlay(self.view)
+        downloadSessions()
+    }
+    
+    func downloadSessions() {
+        print("Download sessions for athlete: \(athlete.getUserId())")
+        let url = Downloader.buildURL(type: Downloader.type.trials.rawValue, parameters: [Downloader.key.user.rawValue: athlete.getUserId()])
+        print(url)
+        Downloader.downloadJSONAny(fromURL: url) { (snapshot) in
+            if let value = snapshot as? [[String: Any]] {
+                print("Parsing")
+                self.parseSessions(value)
+            }
+        }
+    }
+    
+    public func parseSessions(_ value: [[String: Any]]) {
+        let trials = Trial.parseFromJSON(value)
+        athlete.setTrials(trials: trials)
+        self.tableView.reloadData()
+        LoadingOverlay.shared.hideOverlayView()
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -25,16 +45,17 @@ class SelectSessionTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return athlete.getSessions().count
+        return athlete.getTrials().count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        let session = athlete.getSessions()[indexPath.row]
-        cell.textLabel?.text = session.getName();
+        let trial = athlete.getTrials()[indexPath.row]
+        cell.textLabel?.text = trial.getName()
         return cell
     }
     
+    /*
     // pass the selected athlete to the next screen, which displays a list of sessions
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier != nil && segue.identifier! == SEGUE_SELECT_SESSION {
@@ -45,5 +66,5 @@ class SelectSessionTableViewController: UITableViewController {
             }
         }
     }
-    
+    */
 }
