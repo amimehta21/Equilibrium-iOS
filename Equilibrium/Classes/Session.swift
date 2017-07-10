@@ -6,12 +6,13 @@
 //  Copyright © 2017 Vayu Technology. All rights reserved.
 //
 
+// Session – holds the data types present in the file directory
+
 import Foundation
 
 
 public class Session {
-    private var name: String
-    private var id: Int
+    private var trial: Trial!
     
     // these hold reference names
     private var acceleration: [String]?
@@ -22,8 +23,7 @@ public class Session {
     private var velocity: [String]?
     
     init() {
-        name = ""
-        id = -1
+        trial = Trial()
         acceleration = nil
         grf = nil
         orientation = nil
@@ -31,9 +31,8 @@ public class Session {
         velocity = nil
     }
     
-    init(name: String, id: Int, acceleration: [String]?, grf: String?, orientation: [String: [String: [String]]]?, stats: String?, velocity: [String]?) {
-        self.name = name
-        self.id = id
+    init(trial: Trial, acceleration: [String]?, grf: String?, orientation: [String: [String: [String]]]?, stats: String?, velocity: [String]?) {
+        self.trial = trial
         self.acceleration = acceleration
         self.grf = grf
         self.orientation = orientation
@@ -41,8 +40,7 @@ public class Session {
         self.velocity = velocity
     }
     
-    func getName() -> String { return name }
-    func getID() -> Int { return id; }
+    func getTrial() -> Trial { return trial }
     func getAcceleration() -> [String]? { return acceleration }
     func getGRF() -> String? { return grf }
     func getOrientation() -> [String: [String: [String]]]? { return orientation }

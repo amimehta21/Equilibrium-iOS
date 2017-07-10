@@ -75,6 +75,7 @@ class LoginTableViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == segue_identifiers.athlete_login.rawValue {
+            // need to build in athlete logic here
             //if let nextView = segue.destination as? SessionMainTableViewController {
             //    nextView.user = user
             //}

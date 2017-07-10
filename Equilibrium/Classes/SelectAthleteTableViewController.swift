@@ -21,8 +21,10 @@ class SelectAthleteTableViewController: UITableViewController {
         if let orgID = coach.getUser().getOrgID() {
             print("isUserManager: \(coach.getUser().getIsUserManager())")
             print("isUserAthlete: \(coach.getUser().getIsAthlete())")
-            
+
             let userPath = Downloader.buildURL(type: User.urlKeys.athletes.rawValue, parameters: [User.urlKeys.user.rawValue: "\(coach.getUser().getUserID())", User.urlKeys.org.rawValue: "\(orgID)"])
+            
+            // download & parse a list of athletes for this coach
             Downloader.downloadJSONAny(fromURL: userPath, completion: { (snapshot) in
                 self.itemsDownloaded(snapshot: snapshot)
             })

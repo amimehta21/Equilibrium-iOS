@@ -181,7 +181,13 @@
                             <outlet property="delegate" destination="M8u-LN-e8i" id="6Gu-P2-RUv"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Select an Athlete" id="4BE-QY-HVy"/>
+                    <navigationItem key="navigationItem" title="Select an Athlete" id="4BE-QY-HVy">
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="mkL-Aq-T69">
+                            <connections>
+                                <segue destination="wM9-Ey-VZP" kind="presentation" identifier="" modalTransitionStyle="flipHorizontal" id="X3q-TP-IGA"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yOE-8Q-Ewk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

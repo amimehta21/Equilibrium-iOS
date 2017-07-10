@@ -6,9 +6,15 @@
 //  Copyright © 2017 Vayu Technology. All rights reserved.
 //
 
+/*
+ 
+ TRIAL: holds trialId, name, etc. – the keys from the JSON object
+ 
+ */
+
 import UIKit
 
-class Trial: NSObject {
+public class Trial: NSObject {
 
     public enum keys: String {
         case trialId
@@ -31,6 +37,16 @@ class Trial: NSObject {
     private var userID: Int!
     private var licenseID: Int?
     private var timestamp: String! // Should be int
+    
+    override init() {
+        self.trialID = -1
+        self.name = ""
+        self.trialType = ""
+        self.isArchived = false
+        self.userID = -1
+        self.licenseID = nil
+        self.timestamp = ""
+    }
     
     public init(trialID: Int, name: String, trialType: String, isArchived: Bool, userID: Int, licenseID: Int? = nil, timestamp: String!) {
         self.trialID = trialID

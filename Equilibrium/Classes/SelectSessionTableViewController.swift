@@ -55,16 +55,22 @@ class SelectSessionTableViewController: UITableViewController {
         return cell
     }
     
-    /*
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let trial = athlete.getTrials()[indexPath.row]
+        print("Athlete ID: " + athlete.getUserId())
+        print("Trial ID: " + "\(trial.getId())")
+    }
+    
+    
     // pass the selected athlete to the next screen, which displays a list of sessions
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier != nil && segue.identifier! == SEGUE_SELECT_SESSION {
             if let nextView = segue.destination as? SessionMainTableViewController, let path = self.tableView.indexPathForSelectedRow {
-                nextView.session = athlete.getSessions()[path.row]
+                nextView.athleteId = athlete.getUserId()
+                nextView.trial = athlete.getTrials()[path.row]
                 print("passed")
-                print(athlete.getSessions()[path.row].getAcceleration())
             }
         }
     }
-    */
+    
 }

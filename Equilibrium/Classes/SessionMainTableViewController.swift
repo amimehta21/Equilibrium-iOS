@@ -24,7 +24,8 @@ class SessionMainTableViewController: UITableViewController {
     @IBOutlet weak var stepsCell: UITableViewCell!
     @IBOutlet weak var distanceCell: UITableViewCell!
     
-    
+    var athleteId: String!
+    var trial: Trial!
     var session: Session = Session()
     
     var location = String()
@@ -36,14 +37,23 @@ class SessionMainTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        location = "/\(session.getID())"
+        LoadingOverlay.shared.showOverlay(self.view)
+        // initialize session from trila ID's here
+        let parentDirectory = Finder.buildParentDir(athleteId: athleteId, trialId: "\(trial.getId())")
+        print(parentDirectory)
+        session = Finder.getSession(forAthlete: athleteId, forTrial: trial)
+        location = parentDirectory
+        self.tableView.reloadData()
+        // location = "/\(session.getID())"
         if let fileName = session.getStats() {
             parseStats(fileName: fileName)
         }
+        LoadingOverlay.shared.hideOverlayView()
     }
     
     func parseStats(fileName: String) {
-        let path = Bundle.main.path(forResource: "1", ofType: "")! + location + "/stats/" + fileName.lowercased() + ".json"
+        var path = Finder.buildParentDir(athleteId: athleteId, trialId: "\(trial.getId())")
+        path += "/stats/" + fileName.lowercased() + ".json"
 
         if let jsonObject = FileUtils.getJSON(atPath: path) as? [String: String] {
             rightGaitCell.detailTextLabel?.text = jsonObject["right_gait"]

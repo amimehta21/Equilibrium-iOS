@@ -22,9 +22,8 @@ class GraphViewController: UIViewController, ChartViewDelegate {
         super.viewDidLoad()
         self.navigationItem.title = name
         self.navigationController?.setToolbarHidden(false, animated: true)
-        let folderPath = Bundle.main.path(forResource: "1", ofType: "")
         let fileName = name.lowercased() + ".json"
-        let path = folderPath! + location + fileName
+        let path = location + fileName
 
         if let jsonObject = FileUtils.getJSON(atPath: path), let jsonString = FileUtils.getStringFromFile(atPath: path) {
             var numGraphs = 0

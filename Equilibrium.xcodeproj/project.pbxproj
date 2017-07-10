@@ -12,7 +12,8 @@
 		5A0CD2021F02BFF2004CC116 /* Organization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0CD2011F02BFF2004CC116 /* Organization.swift */; };
 		5A0CD20E1F0411D3004CC116 /* LoadingOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0CD20D1F0411D3004CC116 /* LoadingOverlay.swift */; };
 		5A0CD2101F041358004CC116 /* Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0CD20F1F041358004CC116 /* Downloader.swift */; };
-		5A56609C1EEF4ADC0002A56C /* 1 in Resources */ = {isa = PBXBuildFile; fileRef = 5A56609B1EEF4ADC0002A56C /* 1 */; };
+		5A5658111F117DF900FC7A93 /* testdata in Resources */ = {isa = PBXBuildFile; fileRef = 5A5658101F117DF900FC7A93 /* testdata */; };
+		5A5658131F117E1E00FC7A93 /* Finder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5658121F117E1E00FC7A93 /* Finder.swift */; };
 		5A56609E1EEF5EBD0002A56C /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A56609D1EEF5EBD0002A56C /* GraphViewController.swift */; };
 		5A5986F31EF2EE83007755CC /* SessionMainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5986F21EF2EE83007755CC /* SessionMainTableViewController.swift */; };
 		5A5986F51EF2F82F007755CC /* OrientationMainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5986F41EF2F82F007755CC /* OrientationMainTableViewController.swift */; };
@@ -69,7 +70,8 @@
 		5A0CD2011F02BFF2004CC116 /* Organization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Organization.swift; path = Classes/Organization.swift; sourceTree = "<group>"; };
 		5A0CD20D1F0411D3004CC116 /* LoadingOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoadingOverlay.swift; path = Classes/LoadingOverlay.swift; sourceTree = "<group>"; };
 		5A0CD20F1F041358004CC116 /* Downloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Downloader.swift; path = Classes/Downloader.swift; sourceTree = "<group>"; };
-		5A56609B1EEF4ADC0002A56C /* 1 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = 1; sourceTree = "<group>"; };
+		5A5658101F117DF900FC7A93 /* testdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = testdata; sourceTree = "<group>"; };
+		5A5658121F117E1E00FC7A93 /* Finder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Finder.swift; path = Classes/Finder.swift; sourceTree = "<group>"; };
 		5A56609D1EEF5EBD0002A56C /* GraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GraphViewController.swift; path = Classes/GraphViewController.swift; sourceTree = "<group>"; };
 		5A5986F21EF2EE83007755CC /* SessionMainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SessionMainTableViewController.swift; path = Classes/SessionMainTableViewController.swift; sourceTree = "<group>"; };
 		5A5986F41EF2F82F007755CC /* OrientationMainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OrientationMainTableViewController.swift; path = Classes/OrientationMainTableViewController.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				5AC5C5011EECA724007829E4 /* Main.storyboard */,
+				5A5658101F117DF900FC7A93 /* testdata */,
 				5AC5C4FD1EECA724007829E4 /* AppDelegate.swift */,
 				5A8729711EEE43AC001A04E6 /* FirstViewController.swift */,
 				5A8729751EEE474B001A04E6 /* LoginTableViewController.swift */,
@@ -180,7 +183,6 @@
 				5AC5C5091EECA724007829E4 /* LaunchScreen.storyboard */,
 				5AC5C50C1EECA724007829E4 /* Info.plist */,
 				5AC5C5041EECA724007829E4 /* Equilibrium.xcdatamodeld */,
-				5A56609B1EEF4ADC0002A56C /* 1 */,
 			);
 			path = Equilibrium;
 			sourceTree = "<group>";
@@ -248,6 +250,7 @@
 				5AD7D5681F0D5E7400D40F7C /* GlobalUtils.swift */,
 				5A0CD20F1F041358004CC116 /* Downloader.swift */,
 				5A0CD20D1F0411D3004CC116 /* LoadingOverlay.swift */,
+				5A5658121F117E1E00FC7A93 /* Finder.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -394,7 +397,7 @@
 			files = (
 				5AC5C50B1EECA724007829E4 /* LaunchScreen.storyboard in Resources */,
 				5AC5C5081EECA724007829E4 /* Assets.xcassets in Resources */,
-				5A56609C1EEF4ADC0002A56C /* 1 in Resources */,
+				5A5658111F117DF900FC7A93 /* testdata in Resources */,
 				5AC5C5031EECA724007829E4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -573,6 +576,7 @@
 				5A5986F91EF30369007755CC /* SessionDetailTableViewController.swift in Sources */,
 				5AC5C5061EECA724007829E4 /* Equilibrium.xcdatamodeld in Sources */,
 				5A7D51C11EFD7A7300E20E17 /* Trial.swift in Sources */,
+				5A5658131F117E1E00FC7A93 /* Finder.swift in Sources */,
 				5A8729781EEE4BC5001A04E6 /* SelectAthleteTableViewController.swift in Sources */,
 				5AD7D5691F0D5E7400D40F7C /* GlobalUtils.swift in Sources */,
 				5A7D51C31EFD81E700E20E17 /* Device.swift in Sources */,
