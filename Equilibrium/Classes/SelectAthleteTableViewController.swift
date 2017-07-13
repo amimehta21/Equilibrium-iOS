@@ -17,6 +17,7 @@ class SelectAthleteTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        coach = SimpleCoach(user: <#T##User#>, athletes: <#T##[[String : String]]#>)
         LoadingOverlay.shared.showOverlay(self.view)
         if let orgID = coach.getUser().getOrgID() {
             print("isUserManager: \(coach.getUser().getIsUserManager())")
