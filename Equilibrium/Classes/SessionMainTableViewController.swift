@@ -22,7 +22,7 @@ class SessionMainTableViewController: UITableViewController {
     @IBOutlet weak var rightStanceCell: UITableViewCell!
     @IBOutlet weak var leftStanceCell: UITableViewCell!
     @IBOutlet weak var stepsCell: UITableViewCell!
-    @IBOutlet weak var distanceCell: UITableViewCell!
+    // @IBOutlet weak var distanceCell: UITableViewCell!
     
     var athleteId: String!
     var trial: Trial!
@@ -63,7 +63,7 @@ class SessionMainTableViewController: UITableViewController {
             rightStanceCell.detailTextLabel?.text = jsonObject["right_stance"]
             leftStanceCell.detailTextLabel?.text = jsonObject["left_stance"]
             stepsCell.detailTextLabel?.text = jsonObject["steps"]
-            distanceCell.detailTextLabel?.text = jsonObject["distance"]
+            // distanceCell.detailTextLabel?.text = jsonObject["distance"]
         }
         
     }

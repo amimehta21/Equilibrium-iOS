@@ -17,8 +17,8 @@ class SelectSessionTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        LoadingOverlay.shared.showOverlay(self.view)
-        downloadSessions()
+        // LoadingOverlay.shared.showOverlay(self.view)
+        // downloadSessions()
     }
     
     func downloadSessions() {

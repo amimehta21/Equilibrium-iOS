@@ -30,6 +30,7 @@
 		5A8729781EEE4BC5001A04E6 /* SelectAthleteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8729771EEE4BC5001A04E6 /* SelectAthleteTableViewController.swift */; };
 		5A87297A1EEE4BD0001A04E6 /* SelectSessionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8729791EEE4BD0001A04E6 /* SelectSessionTableViewController.swift */; };
 		5AAC64951EF1BF1C00BD550B /* ChartDataStructures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AAC64941EF1BF1C00BD550B /* ChartDataStructures.swift */; };
+		5AB720231F17233300A4658D /* Icons in Resources */ = {isa = PBXBuildFile; fileRef = 5AB720221F17233300A4658D /* Icons */; };
 		5AC5C4FE1EECA724007829E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC5C4FD1EECA724007829E4 /* AppDelegate.swift */; };
 		5AC5C5031EECA724007829E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AC5C5011EECA724007829E4 /* Main.storyboard */; };
 		5AC5C5061EECA724007829E4 /* Equilibrium.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5AC5C5041EECA724007829E4 /* Equilibrium.xcdatamodeld */; };
@@ -88,6 +89,7 @@
 		5A8729771EEE4BC5001A04E6 /* SelectAthleteTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SelectAthleteTableViewController.swift; path = Classes/SelectAthleteTableViewController.swift; sourceTree = "<group>"; };
 		5A8729791EEE4BD0001A04E6 /* SelectSessionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SelectSessionTableViewController.swift; path = Classes/SelectSessionTableViewController.swift; sourceTree = "<group>"; };
 		5AAC64941EF1BF1C00BD550B /* ChartDataStructures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChartDataStructures.swift; path = Classes/ChartDataStructures.swift; sourceTree = "<group>"; };
+		5AB720221F17233300A4658D /* Icons */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Icons; path = Equilibrium/Icons; sourceTree = SOURCE_ROOT; };
 		5AC5C4FA1EECA724007829E4 /* Equilibrium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Equilibrium.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AC5C4FD1EECA724007829E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5AC5C5021EECA724007829E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 				5AC5C5091EECA724007829E4 /* LaunchScreen.storyboard */,
 				5AC5C50C1EECA724007829E4 /* Info.plist */,
 				5AC5C5041EECA724007829E4 /* Equilibrium.xcdatamodeld */,
+				5AB720221F17233300A4658D /* Icons */,
 			);
 			path = Equilibrium;
 			sourceTree = "<group>";
@@ -406,6 +409,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AB720231F17233300A4658D /* Icons in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -746,7 +750,7 @@
 				DEVELOPMENT_TEAM = NJ9TF22X38;
 				INFOPLIST_FILE = Equilibrium/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = tech.vayu.Equilibrium;
+				PRODUCT_BUNDLE_IDENTIFIER = tech.vayu.eq;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -760,7 +764,7 @@
 				DEVELOPMENT_TEAM = NJ9TF22X38;
 				INFOPLIST_FILE = Equilibrium/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = tech.vayu.Equilibrium;
+				PRODUCT_BUNDLE_IDENTIFIER = tech.vayu.eq;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
